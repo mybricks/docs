@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const targetPath = path.resolve(__dirname, './../docs/组件库/PC通用组件库/动态表单项/动态表单项.md')
+const targetPath = path.resolve(__dirname, './../docs/组件库/PC通用组件库/下拉框/下拉框.md')
 
 const read = () => {
   return fs.readFileSync(targetPath, 'utf-8')
