@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://docs.mybricks.world/blog</id>
-    <title>Mybricks 文档中心 Blog</title>
+    <title>MyBricks 文档中心 Blog</title>
     <updated>2021-08-26T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://docs.mybricks.world/blog"/>
-    <subtitle>Mybricks 文档中心 Blog</subtitle>
+    <subtitle>MyBricks 文档中心 Blog</subtitle>
     <icon>https://docs.mybricks.world/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[Welcome]]></title>

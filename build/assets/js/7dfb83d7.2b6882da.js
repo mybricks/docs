@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[1874],{10385:(s,c,e)=>{e.r(c),e.d(c,{default:()=>d});var a=e(85893);const d=()=>(0,a.jsx)("div",{className:"showcase",children:"\u6848\u4f8b"})}}]);
