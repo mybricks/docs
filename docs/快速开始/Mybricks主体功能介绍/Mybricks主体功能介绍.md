@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-![总览图](img/image-9.png)
+![总览图](img/image-10.png)
 
 ## MyBricks 设计器功能结构
 
