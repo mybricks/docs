@@ -3,7 +3,7 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'Mybricks 文档中心',
+  title: 'MyBricks 文档中心',
   tagline: 'Dinosaurs are cool',
   favicon: 'img/favicon.ico',
 
@@ -16,7 +16,7 @@ const config: Config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'mybricks', // Usually your GitHub org/user name.
-  projectName: 'Mybricks', // Usually your repo name.
+  projectName: 'MyBricks', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -58,7 +58,7 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'Mybricks 文档中心',
+      title: 'MyBricks 文档中心',
       logo: {
         alt: 'Mybricks低代码',
         src: 'img/logo.png',
