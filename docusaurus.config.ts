@@ -66,9 +66,15 @@ const config: Config = {
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          sidebarId: 'docsSidebar',
           position: 'left',
           label: '文档',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'schoolSidebar',
+          position: 'left',
+          label: '课程',
         },
         // {to: '/blog', label: '团队博客', position: 'left'},
         // {
