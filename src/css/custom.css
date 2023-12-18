@@ -74,6 +74,25 @@
 } */
 
 
+section[class*=DocCategoryGeneratedIndexPage] .card {
+  box-shadow: none;
+  border-radius: 6px;
+}
+
+
+section[class*=DocCategoryGeneratedIndexPage] {
+  margin: 0 -8px;
+}
+
+section[class*=DocCategoryGeneratedIndexPage] article {
+  padding: 0px 8px;
+  margin-bottom: 15px !important;
+}
+
+section[class*=DocCategoryGeneratedIndexPage] .card:hover h2 {
+  color: var(--ifm-color-primary);
+}
+
 .markdown blockquote  {
   padding-bottom: 0.3em;
   padding-top: 0.3em;

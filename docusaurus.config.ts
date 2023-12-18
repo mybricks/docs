@@ -72,56 +72,60 @@ const config: Config = {
         },
         // {to: '/blog', label: '团队博客', position: 'left'},
         // {
-        //   href: 'https://github.com/facebook/docusaurus',
+        //   href: 'https://github.com/mybricks',
         //   label: 'GitHub',
         //   position: 'right',
         // },
       ],
     },
     footer: {
-      style: 'dark',
-      // links: [
-      //   {
-      //     title: 'Docs',
-      //     items: [
-      //       {
-      //         label: 'Tutorial',
-      //         to: '/docs/intro',
-      //       },
-      //     ],
-      //   },
-      //   {
-      //     title: 'Community',
-      //     items: [
-      //       {
-      //         label: 'Stack Overflow',
-      //         href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-      //       },
-      //       {
-      //         label: 'Discord',
-      //         href: 'https://discordapp.com/invite/docusaurus',
-      //       },
-      //       {
-      //         label: 'Twitter',
-      //         href: 'https://twitter.com/docusaurus',
-      //       },
-      //     ],
-      //   },
-      //   {
-      //     title: 'More',
-      //     items: [
-      //       {
-      //         label: 'Blog',
-      //         to: '/blog',
-      //       },
-      //       {
-      //         label: 'GitHub',
-      //         href: 'https://github.com/facebook/docusaurus',
-      //       },
-      //     ],
-      //   },
-      // ],
+      logo: {
+        alt: 'Mybricks低代码',
+        src: 'img/logo.png',
+        width: 50,
+        height: 50,
+      },
       copyright: `Copyright © ${new Date().getFullYear()} Mybricks.`,
+      links: [
+        {
+          title: '产品',
+          items: [
+            {
+              label: 'Mybricks-SPA 低代码引擎',
+              href: 'https://mybricks.world',
+            },
+            {
+              label: 'VsCode插件',
+              href: 'https://marketplace.visualstudio.com/items?itemName=Mybricks.Mybricks&ssr=false#overview'
+            }
+          ],
+        },
+        {
+          title: '文档',
+          items: [
+            {
+              label: '快速开始',
+              to: 'docs/category/快速开始',
+            },
+          ],
+        },
+        {
+          title: '链接',
+          items: [
+            {
+              label: 'Github',
+              href: 'https://github.com/mybricks',
+            },
+            // {
+            //   html: `
+            //       <a href="https://www.netlify.com" target="_blank" rel="noreferrer noopener" aria-label="Deploys by Netlify">
+            //         <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="114" height="51" />
+            //       </a>
+            //     `,
+            // },
+          ],
+        },
+      ],
     },
     prism: {
       theme: prismThemes.github,
