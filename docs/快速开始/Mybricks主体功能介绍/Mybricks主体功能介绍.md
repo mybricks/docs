@@ -6,7 +6,7 @@ sidebar_position: 1
 
 ## MyBricks 设计器功能结构
 
-整个Mybricks设计器分为了五个部分：导航栏、左侧工具栏、中间画布、右侧属性栏、底部交互区。
+整个Mybricks设计器分为了五个部分：导航栏、左侧插件栏、中间画布、右侧组件编辑区、底部交互面板。
 
 ### 导航栏
 ![Alt text](img/image-1.png)
@@ -18,7 +18,7 @@ sidebar_position: 1
   - 测试环境
   - 线上环境
 
-### 左侧工具栏
+### 左侧插件栏
 - 连接器
 - 领域模型
 - 保存/发布记录
@@ -49,6 +49,6 @@ sidebar_position: 1
 ![Alt text](img/image-7.png)
 
 
-### 底部交互区
+### 底部交互面板
 交互区可以编辑按钮等等业务动作的逻辑，比如下面是按钮组件的交互区：
 ![Alt text](img/image-8.png)
