@@ -1,9 +1,16 @@
+---
+description: 在页面中嵌入广告
+sidebar_position: 1001
+tags:
+  - UI组件
+---
+
 ![Alt text](img/image.png)
 
-```
-应用场景
+> **应用场景**\
 场景：在页面中嵌入广告
-```
+
+
 Demo地址：[【iFrame】基本使用](https://my.mybricks.world/mybricks-pc-page/index.html?id=475065336168517)
 
 ----
