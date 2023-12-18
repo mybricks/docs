@@ -111,7 +111,7 @@ const config: Config = {
           items: [
             {
               label: '快速开始',
-              to: 'docs/category/快速开始',
+              to: 'docs/category/quick-start',
             },
           ],
         },

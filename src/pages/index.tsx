@@ -19,7 +19,7 @@ function HomepageHeader() {
         <div className={css.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/快速开始"
+            to="/docs/quick-start"
           >
             快速开始
           </Link>
@@ -57,7 +57,7 @@ export default function Home(): JSX.Element {
                 快速开始
               </button> */}
 
-              <Link className={css.quickStart} to="/docs/简介">
+              <Link className={css.quickStart} to="/docs/quick-start">
                 快速开始
               </Link>
 
