@@ -21,3 +21,228 @@
   align-items: center;
   justify-content: center;
 }
+
+/****/
+:global ::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+:global ::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+  background-color: transparent;
+}
+:global ::-webkit-scrollbar-thumb {
+  background-color: #ddd;
+}
+:global * {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+:global .hljs {
+  font-size: 20px;
+  line-height: 20px;
+}
+:global .language-jsx {
+  margin: auto;
+  width: 1000px;
+  position: relative !important;
+}
+.nowTheme {
+  background-color: whitesmoke !important;
+}
+.groupQR {
+  position: fixed;
+  z-index: 1000;
+  bottom: 300px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  padding: 3px 5px 3px 5px;
+  box-shadow: rgba(0, 0, 0, 0.13) 2px 2px 40px;
+}
+.groupQR img {
+  max-width: 130px;
+}
+.chat {
+  position: fixed;
+  z-index: 1000;
+  bottom: 100px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  padding: 7px 10px 5px 10px;
+  box-shadow: rgba(0, 0, 0, 0.13) 2px 2px 40px;
+}
+.chat img {
+  max-width: 120px;
+}
+.view {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.view section {
+  width: 1140px;
+  margin: 0 auto;
+  position: relative;
+}
+.view .slogan {
+  padding-top: 30px;
+  height: 380px;
+  background-color: whitesmoke !important;
+}
+.view .slogan > section > * {
+  position: absolute;
+}
+.view .slogan .name {
+  top: 15px;
+  color: #fa6400;
+  font-weight: bold;
+  left: 0;
+  font-size: 20px;
+}
+.view .slogan .desc {
+  top: 130px;
+  left: 0;
+  font-size: 26px;
+}
+.view .slogan label {
+  top: 50px;
+  left: -5px;
+  color: #555;
+  font-size: 46px;
+  font-weight: 600;
+}
+.view .slogan {
+}
+
+.view .slogan .quickStart {
+  top: 260px;
+  left: 0;
+  /* margin-bottom: 80px; */
+  /* margin: 0  80px 0; */
+  /* margin: 0 10px; */
+  background: #fa6400;
+  padding: 12px 35px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  /* height: 25px; */
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  border: none;
+}
+.view .slogan .quickStart svg {
+  max-width: 24px;
+  margin-right: 10px;
+}
+.view .slogan .quickStart svg path {
+  fill: #fff;
+}
+
+.view .slogan img {
+  top: 5px;
+  right: 0;
+  max-width: 420px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+}
+.view .scenes {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.view .scenes .title {
+  font-size: 36px;
+  font-weight: 400;
+  text-align: center;
+  color: #fa6400;
+}
+.view .scenes .items {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.view .scenes .items .item {
+  width: 265px;
+  margin: 10px;
+  padding: 20px 25px;
+  outline: 1px solid #ddd;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.view .scenes .items .item:hover h3 {
+  color: #fa6400;
+  font-weight: 400;
+}
+.view .scenes .items .item h3 {
+  font-size: 18px;
+  text-align: center;
+  color: #333;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+.view .scenes .items .item p {
+  font-size: 16px;
+  margin-top: 5px;
+  line-height: 26px;
+  color: #777;
+  font-weight: 200;
+}
+.view .details {
+  border-top: 1px dashed #eee;
+  padding-top: 50px;
+}
+.view .details .title {
+  font-size: 36px;
+  font-weight: 400;
+  text-align: center;
+  color: #999;
+}
+.view .details .items {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.view .details .items .item {
+  width: 360px;
+  margin: 10px;
+  border-radius: 5px;
+  padding: 15px 20px;
+  transition: all 0.1s;
+  box-shadow: 0 2px 5px 0 rgba(16, 20, 40, 0.1);
+}
+.view .details .items .item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px 0 rgba(16, 20, 40, 0.1);
+}
+.view .details .items .item:hover h3 {
+  color: #fa6400;
+}
+.view .details .items .item h3 {
+  font-size: 20px;
+  color: #333;
+  font-weight: 400;
+}
+.view .details .items .item p {
+  font-size: 16px;
+  margin-top: 5px;
+  line-height: 26px;
+  color: #777;
+  font-weight: 200;
+}
+.view .showPic {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+.view .showPic img {
+  max-width: 900px;
+  box-shadow: rgba(0, 0, 0, 0.13) 2px 2px 40px;
+}
