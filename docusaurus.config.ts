@@ -127,7 +127,13 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
+    tableOfContents: {
+      maxHeadingLevel: 5, // 最大展示标题到h5
+    },
   } satisfies Preset.ThemeConfig,
+  markdown: {
+    format: 'detect' // 识别md和mdx后缀自动编译，md会走普通md编译，只有mdx才会走mdx编译
+  }
 };
 
 export default config;
