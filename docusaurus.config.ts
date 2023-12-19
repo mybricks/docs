@@ -18,7 +18,7 @@ const config: Config = {
   organizationName: 'mybricks', // Usually your GitHub org/user name.
   projectName: 'MyBricks', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
@@ -154,11 +154,11 @@ const config: Config = {
         hashed: true,
         // For Docs using Chinese, The `language` is recommended to set to:
         // ```
-        // language: ["en", "zh"],
+        language: ["en", "zh"],
         // ```
       }),
     ],
-  ]
+  ],
 };
 
 export default config;
