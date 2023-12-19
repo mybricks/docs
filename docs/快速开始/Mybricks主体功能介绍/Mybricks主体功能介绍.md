@@ -6,7 +6,7 @@ sidebar_position: 1
 
 ## MyBricks 设计器功能结构
 
-整个Mybricks设计器分为了五个部分：导航栏、左侧插件栏、中间画布、右侧组件编辑区、底部交互面板。
+整个MyBricks设计器分为了五个部分：导航栏、左侧插件栏、中间画布、右侧组件编辑区、底部交互面板。
 
 ### 导航栏
 ![Alt text](img/image-1.png)

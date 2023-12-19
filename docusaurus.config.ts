@@ -60,7 +60,7 @@ const config: Config = {
     navbar: {
       title: 'MyBricks 文档中心',
       logo: {
-        alt: 'Mybricks低代码',
+        alt: 'MyBricks低代码',
         src: 'img/logo.png',
       },
       items: [
@@ -86,18 +86,18 @@ const config: Config = {
     },
     footer: {
       logo: {
-        alt: 'Mybricks低代码',
+        alt: 'MyBricks低代码',
         src: 'img/logo.png',
         width: 50,
         height: 50,
       },
-      copyright: `Copyright © ${new Date().getFullYear()} Mybricks.`,
+      copyright: `Copyright © ${new Date().getFullYear()} MyBricks.`,
       links: [
         {
           title: '产品',
           items: [
             {
-              label: 'Mybricks-SPA 低代码引擎',
+              label: 'MyBricks-SPA 低代码引擎',
               href: 'https://mybricks.world',
             },
             {

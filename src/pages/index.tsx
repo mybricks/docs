@@ -41,7 +41,7 @@ export default function Home(): JSX.Element {
         <div className={css.view}>
           <div className={css.slogan}>
             <section>
-              <p className={css.name}>Mybricks-SPA</p>
+              <p className={css.name}>MyBricks-SPA</p>
               <label>可嵌入您系统的企业级低代码引擎</label>
               <p className={css.desc}>
                 各类UI建模及仿真、渲染器、插件、通用组件库等
@@ -108,14 +108,14 @@ export default function Home(): JSX.Element {
               <div className={css.item}>
                 <h3>降本增效利器</h3>
                 <p>
-                  统计数据表明，使用Mybricks-SPA可以将效率提升8-10倍，成本降低为原来的1/4。仅需要基本的前端工程能力，即可完成各类复杂业务场景的开发。
+                  统计数据表明，使用MyBricks-SPA可以将效率提升8-10倍，成本降低为原来的1/4。仅需要基本的前端工程能力，即可完成各类复杂业务场景的开发。
                 </p>
               </div>
 
               <div className={css.item}>
                 <h3>轻松接入，开箱即用</h3>
                 <p>
-                  Mybricks-SPA封装集成了面向不同场景的应用模版、组件库、插件等，通过简单几行代码即可将其集成到自己的低代码搭建平台中
+                  MyBricks-SPA封装集成了面向不同场景的应用模版、组件库、插件等，通过简单几行代码即可将其集成到自己的低代码搭建平台中
                 </p>
               </div>
 
@@ -129,26 +129,26 @@ export default function Home(): JSX.Element {
               <div className={css.item}>
                 <h3>纯前端技术、跨平台应用嵌入</h3>
                 <p>
-                  Mybricks-SPA支持跨平台开发，使用其功能无需预装任何插件或第三方组件，支持以原生的方式嵌入各类应用，与各类后端技术框架相结合。
+                  MyBricks-SPA支持跨平台开发，使用其功能无需预装任何插件或第三方组件，支持以原生的方式嵌入各类应用，与各类后端技术框架相结合。
                 </p>
               </div>
 
               <div className={css.item}>
                 <h3>强大的图形化编程能力</h3>
                 <p>
-                  搭载了强大的Mybricks-Flow图形编排引擎，完全积木式的搭建体验，即时调试，真正意义的所见即所得
+                  搭载了强大的MyBricks-Flow图形编排引擎，完全积木式的搭建体验，即时调试，真正意义的所见即所得
                 </p>
               </div>
 
               <div className={css.item}>
                 <h3>搭载通用组件库、自定义开发</h3>
                 <p>
-                  随引擎搭载了各类通用组件库，历时多年的打磨、久经场景淬炼。同时，通过使用Mybricks-DevTools，您可以轻松开发自己的组件库
+                  随引擎搭载了各类通用组件库，历时多年的打磨、久经场景淬炼。同时，通过使用MyBricks-DevTools，您可以轻松开发自己的组件库
                 </p>
               </div>
 
               <div className={css.item}>
-                <h3>Mybricks.ai</h3>
+                <h3>MyBricks.ai</h3>
                 <p>
                   随引擎搭载了基于chatGPT的Copilot，自然语言驱动。同时，该项能力会持续进化，未来将支持更多的AI能力，为您的开发提供更多的便利
                 </p>
@@ -164,7 +164,7 @@ export default function Home(): JSX.Element {
               <div className={css.item}>
                 <h3>开源与社区</h3>
                 <p>
-                  在Mybricks的Github社区，您可以免费获取各类组件库、编辑库、插件等源码资源，也可以在社区中与其他开发者交流
+                  在MyBricks的Github社区，您可以免费获取各类组件库、编辑库、插件等源码资源，也可以在社区中与其他开发者交流
                 </p>
               </div>
             </div>
@@ -172,8 +172,8 @@ export default function Home(): JSX.Element {
         </div>
 
         <div className={css.groupQR}>
-          <img src={"https://f2.beckwai.com/udata/pkg/eshop/fangzhou/temp/mybricks-qrcode.b815281c00c5f36d.jpeg"} />
-          关注Mybricks公众号
+          <img src={"https://f2.beckwai.com/udata/pkg/eshop/fangzhou/temp/mybrickB-qrcode.b815281c00c5f36d.jpeg"} />
+          关注 MyBricks 公众号
         </div>
 
         <div className={css.chat}>
