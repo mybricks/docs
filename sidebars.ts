@@ -28,7 +28,7 @@ const sidebars: SidebarsConfig = {
         collapsed: false,
         "link": {
           "type": "generated-index",
-          "description": "通过以下文档，快速上手Mybricks",
+          "description": "通过以下文档，快速上手MyBricks",
           "slug": "quick-start"
         },
         items: [
