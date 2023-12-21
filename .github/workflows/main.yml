@@ -31,5 +31,5 @@ jobs:
           accessKeySecret: ${{ secrets.ALIYUN_ACCESS_KEY_SECRET }}
           bucket: docs-mybricks-world
           # use your own endpoint
-          endpoint: oss-cn-shanghai.aliyuncs.com
+          endpoint: oss-cn-hangzhou.aliyuncs.com
           folder: build
