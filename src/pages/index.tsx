@@ -172,7 +172,7 @@ export default function Home(): JSX.Element {
         </div>
 
         <div className={css.groupQR}>
-          <img src={"https://f2.beckwai.com/udata/pkg/eshop/fangzhou/temp/mybrickB-qrcode.b815281c00c5f36d.jpeg"} />
+          <img src={"https://f2.beckwai.com/udata/pkg/eshop/fangzhou/temp/mybricks-qrcode.b815281c00c5f36d.jpeg"} />
           关注 MyBricks 公众号
         </div>
 
