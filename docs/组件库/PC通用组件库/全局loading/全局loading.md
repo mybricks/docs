@@ -11,7 +11,7 @@ sidebar_position: 1005
 注：计算组件，可以在连线后的逻辑组件中找到
 
 
-Demo地址：[【全局Loading】基本使用](https://my.mybricks.world/mybricks-pc-page/index.html?id=472220172742725)
+Demo地址：[【全局Loading】基本使用](https://my.mybricks.world/mybricks-app-pcspa/index.html?id=472220172742725)
 
 ----
 

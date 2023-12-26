@@ -11,7 +11,7 @@ tags:
 > **应用场景**\
 场景1：用于展示对应标题的升降序状态
 
-Demo地址：[【排序标题栏】基本使用](https://my.mybricks.world/mybricks-pc-page/index.html?id=477514785579077)
+Demo地址：[【排序标题栏】基本使用](https://my.mybricks.world/mybricks-app-pcspa/index.html?id=477514785579077)
 
 ----
 

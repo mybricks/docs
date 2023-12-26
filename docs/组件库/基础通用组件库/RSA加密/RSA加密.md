@@ -15,7 +15,7 @@ tags:
 
 > 注2：使用[jsencrypt.js](https://www.npmjs.com/package/jsencrypt)进行RSA加密
 
-Demo地址：[【RSA加密】基本使用](https://my.mybricks.world/mybricks-pc-page/index.html?id=472323969294405)
+Demo地址：[【RSA加密】基本使用](https://my.mybricks.world/mybricks-app-pcspa/index.html?id=472323969294405)
 
 
 ----

@@ -13,7 +13,7 @@ tags:
 场景1：顶部导航提供全局性的类目和功能\
 场景2：侧边导航提供多级结构来收纳和排列网站架构
 
-Demo地址：[【菜单】基本使用](https://my.mybricks.world/mybricks-pc-page/index.html?id=473206175535173)
+Demo地址：[【菜单】基本使用](https://my.mybricks.world/mybricks-app-pcspa/index.html?id=473206175535173)
 
 ----
 
