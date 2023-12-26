@@ -37,8 +37,8 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/mybricks/docs/tree/main/',
+          editUrl: 'https://github.com/mybricks/docs/tree/main/',
+          routeBasePath: '/',
         },
         blog: {
           showReadingTime: true,
@@ -72,11 +72,17 @@ const config: Config = {
         },
         {
           type: 'docSidebar',
-          sidebarId: 'schoolSidebar',
+          sidebarId: 'componentsSidebar',
+          position: 'left',
+          label: '组件库',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'trainingSidebar',
           position: 'left',
           label: '课程',
         },
-        // {to: '/blog', label: '团队博客', position: 'left'},
+        {to: '/blog', label: '博客', position: 'left'},
         // {
         //   href: 'https://github.com/mybricks',
         //   label: 'GitHub',

@@ -1,5 +1,6 @@
 {
   "markdown.copyFiles.destination": {
-    "/docs/**/*": "${documentDirName}/img/"
+    "/docs/**/*": "${documentDirName}/img/",
+    "/blog/**/*": "${documentDirName}/img/",
   }
 }
