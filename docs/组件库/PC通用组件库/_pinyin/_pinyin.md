@@ -6,7 +6,7 @@
 
 > 场景1：将汉字处理后，转换为拼音
 
-> Demo地址：[【汉字转拼音】基本使用](https://my.mybricks.world/mybricks-pc-page/index.html?id=477576401068101)
+> Demo地址：[【汉字转拼音】基本使用](https://my.mybricks.world/mybricks-app-pcspa/index.html?id=477576401068101)
 
 # 基本操作
 

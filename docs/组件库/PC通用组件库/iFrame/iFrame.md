@@ -11,7 +11,7 @@ tags:
 场景：在页面中嵌入广告
 
 
-Demo地址：[【iFrame】基本使用](https://my.mybricks.world/mybricks-pc-page/index.html?id=475065336168517)
+Demo地址：[【iFrame】基本使用](https://my.mybricks.world/mybricks-app-pcspa/index.html?id=475065336168517)
 
 ----
 

@@ -9,7 +9,7 @@ tags:
 
 > **应用场景**：展示数组、对象或JSON字符串格式的数据时
 
-Demo地址 [【JSON展示】基本使用](https://my.mybricks.world/mybricks-pc-page/index.html?id=470865296592965)
+Demo地址 [【JSON展示】基本使用](https://my.mybricks.world/mybricks-app-pcspa/index.html?id=470865296592965)
 
 ----
 
