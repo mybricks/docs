@@ -12,7 +12,7 @@ tags:
 场景1：下拉弹出的列表\
 场景2：可以自定义上级元素
 
-Demo地址：[【下拉菜单】基本使用](https://my.mybricks.world/mybricks-pc-page/index.html?id=477503433297989)
+Demo地址：[【下拉菜单】基本使用](https://my.mybricks.world/mybricks-app-pcspa/index.html?id=477503433297989)
 
 ----
 

@@ -11,7 +11,7 @@ tags:
 > **应用场景**\
 语义化的矢量图形
 
-Demo地址：[【图标】基本使用](https://my.mybricks.world/mybricks-pc-page/index.html?id=475477506859077)
+Demo地址：[【图标】基本使用](https://my.mybricks.world/mybricks-app-pcspa/index.html?id=475477506859077)
 
 ----
 
