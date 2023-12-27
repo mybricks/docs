@@ -1,5 +1,5 @@
 ---
-title: 按钮(案例版)
+title: 按钮
 description: 提供各类基础可点击按钮
 sidebar_position: 1
 tags:
