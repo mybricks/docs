@@ -1,8 +1,10 @@
 ---
-title: 主体功能介绍
+title: 工作区基础知识
 ---
 
-![总览图](img/image-10.png)
+![总览图](img/image-10.png "总览图")
+
+<figure>总览图</figure>
 
 ## MyBricks 设计器功能结构
 

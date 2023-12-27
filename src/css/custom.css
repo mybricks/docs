@@ -29,7 +29,6 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-
 /* 
 :root {
   --ifm-color-primary: #FA6400;
@@ -73,27 +72,25 @@
   font-size: 14px;
 } */
 
-
-section[class*=DocCategoryGeneratedIndexPage] .card {
+section[class*="DocCategoryGeneratedIndexPage"] .card {
   box-shadow: none;
   border-radius: 6px;
 }
 
-
-section[class*=DocCategoryGeneratedIndexPage] {
+section[class*="DocCategoryGeneratedIndexPage"] {
   margin: 0 -8px;
 }
 
-section[class*=DocCategoryGeneratedIndexPage] article {
+section[class*="DocCategoryGeneratedIndexPage"] article {
   padding: 0px 8px;
   margin-bottom: 15px !important;
 }
 
-section[class*=DocCategoryGeneratedIndexPage] .card:hover h2 {
+section[class*="DocCategoryGeneratedIndexPage"] .card:hover h2 {
   color: var(--ifm-color-primary);
 }
 
-.markdown blockquote  {
+.markdown blockquote {
   padding-bottom: 0.3em;
   padding-top: 0.3em;
   border-left-width: 3px;
@@ -109,5 +106,14 @@ section[class*=DocCategoryGeneratedIndexPage] .card:hover h2 {
 }
 
 .markdown img {
+  display: block;
   border-radius: 3px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.markdown figure {
+  font-weight: normal;
+  color: #8c8c8c;
+  text-align: center;
+  font-style: italic;
 }
