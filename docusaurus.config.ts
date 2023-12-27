@@ -70,12 +70,12 @@ const config: Config = {
           position: 'left',
           label: '文档',
         },
-        {
-          type: 'docSidebar',
-          sidebarId: 'componentsSidebar',
-          position: 'left',
-          label: '组件库',
-        },
+        // {
+        //   type: 'docSidebar',
+        //   sidebarId: 'componentsSidebar',
+        //   position: 'left',
+        //   label: '组件库',
+        // },
         {
           type: 'docSidebar',
           sidebarId: 'trainingSidebar',
