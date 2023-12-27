@@ -57,7 +57,7 @@ export default function Home(): JSX.Element {
                 快速开始
               </button> */}
 
-              <Link className={css.quickStart} to="/docs/quick-start">
+              <Link className={css.quickStart} to="/docs/about/intro/">
                 快速开始
               </Link>
 
