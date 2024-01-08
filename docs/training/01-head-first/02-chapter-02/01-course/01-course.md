@@ -43,12 +43,12 @@ title: 课程学习
 2. 【点击后对话框获取表格当前项数据】
         
 
-3. 逻辑组件的使用（以JS计算组件为例）
-   >
-   >    完整的搭建教学过程请看：[【搭建视频】](https://meeting.tencent.com/v2/cloud-record/share?id=065eecb7-7942-41bf-ac3f-4456c3f6b603&from=3&is-single=true)   
-   >    搭建的案例示例：[【搭建案例】](https://my.mybricks.world/mybricks-app-pcspa/index.html?id=512216395075653)
-   >
-   **最终成品概览**
+#### 3、逻辑组件的使用（以JS计算组件为例）
+>
+>    完整的搭建教学过程请看：[【搭建视频】](https://meeting.tencent.com/v2/cloud-record/share?id=065eecb7-7942-41bf-ac3f-4456c3f6b603&from=3&is-single=true)   
+>    搭建的案例示例：[【搭建案例】](https://my.mybricks.world/mybricks-app-pcspa/index.html?id=512216395075653)
+>
 
+**最终成品概览**
 
-   **关键步骤**
+**关键步骤**
