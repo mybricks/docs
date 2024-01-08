@@ -2,6 +2,7 @@
 title: 课程学习
 ---
 
+
 ### 知识点
 
 1、表单容器与各类常用表单项组件介绍；[【搭建案例】](https://my.mybricks.world/mybricks-app-pcspa/index.html?id=512184418107461) [【观看视频】](https://meeting.tencent.com/user-center/shared-record-info?id=327b91cc-f360-4141-9e55-fdd8290aaf93&is_webview=1&from=6&app_lang=zh-cn&app_version=3.18.6.445&app_sdk_id=1410001423&app_publish_channel=TencentInside&os_version=13.5.2&os_name=Mac&c_district=0&app_instance_id=2&click_source_for_middle_login=2)
