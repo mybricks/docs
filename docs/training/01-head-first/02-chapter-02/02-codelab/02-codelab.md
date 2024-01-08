@@ -5,7 +5,10 @@ title: 练习
 ### 练习题
 **需求描述：搭建一个带操作项和弹窗的数据表格**
 
-**搭建效果图:**
+**示例页面链接及效果图:**
+
+[点击查看示例页面](https://my.mybricks.world/mfs/app/pcpage/prod/512216052539461.html)   
+
 ![Alt text](img/image.png)
 
 
