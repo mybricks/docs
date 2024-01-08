@@ -2,10 +2,11 @@
 title: 练习
 ---
 
-### 练习题
-**需求描述：搭建一个带操作项和弹窗的数据表格**
+## 练习题
+### 需求描述
+搭建一个带操作项和弹窗的数据表格
 
-**示例页面链接及效果图:**
+### 示例页面链接及效果图
 
 [点击查看示例页面](https://my.mybricks.world/mfs/app/pcpage/prod/512216052539461.html)   
 
@@ -27,6 +28,6 @@ title: 练习
 
 
 
-### 练习题答案
+### 参考答案
 搭建过程：[搭建视频](https://meeting.tencent.com/v2/cloud-record/share?id=fed65038-98f4-42fa-ad28-0d9f1dbe0393&from=3&is-single=true)   
 最终搭建示例：[搭建案例](https://my.mybricks.world/mybricks-app-pcspa/index.html?id=512216052539461)
