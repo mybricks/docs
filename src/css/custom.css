@@ -117,3 +117,12 @@ section[class*="DocCategoryGeneratedIndexPage"] .card:hover h2 {
   text-align: center;
   font-style: italic;
 }
+
+/* sidebar */
+.menu__caret:before {
+  background-size: 1.4rem 1.4rem;
+}
+
+.menu__link--sublist-caret:after {
+  background-size: 1.4rem 1.4rem;
+}
