@@ -50,9 +50,9 @@ const config: Config = {
           customCss: "./src/css/custom.css",
         },
         sitemap: {
-          changefreq: 'weekly',
+          changefreq: "weekly",
           priority: 0.5,
-          filename: 'sitemap.xml',
+          filename: "sitemap.xml",
         },
       } satisfies Preset.Options,
     ],
@@ -150,6 +150,13 @@ const config: Config = {
     tableOfContents: {
       maxHeadingLevel: 5, // 最大展示标题到h5
     },
+    metadata: [
+      {
+        name: "keywords",
+        content:
+          "MyBricks,低代码,低代码引擎,低代码平台,低代码开发,低代码开发平台,低代码开发工具,低代码开发工具",
+      },
+    ],
   } satisfies Preset.ThemeConfig,
   markdown: {
     format: "detect", // 识别md和mdx后缀自动编译，md会走普通md编译，只有mdx才会走mdx编译
@@ -171,7 +178,7 @@ const config: Config = {
   ],
   plugins: [
     [
-      '@docusaurus/plugin-ideal-image',
+      "@docusaurus/plugin-ideal-image",
       {
         quality: 70,
         max: 1030, // max resized image's size.
@@ -180,6 +187,12 @@ const config: Config = {
         disableInDev: false,
       },
     ],
+  ],
+  scripts: [
+    {
+      src: "https://hm.baidu.com/hm.js?574a532b5379b5599af68a6524a989b6",
+      async: true,
+    },
   ],
 };
 
