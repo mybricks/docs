@@ -1,6 +1,6 @@
 ---
+title: JSON展示
 description: 展示数组、对象或JSON字符串格式的数据时
-sidebar_position: 5
 tags:
   - UI组件
 ---

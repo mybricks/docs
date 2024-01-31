@@ -1,6 +1,6 @@
 ---
+title: 进度条
 description: 展示任务进度
-sidebar_position: 6
 tags:
   - UI组件
 ---
