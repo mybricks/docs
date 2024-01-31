@@ -154,7 +154,7 @@ const config: Config = {
       {
         name: "keywords",
         content:
-          "MyBricks,低代码,低代码引擎,低代码平台,低代码开发,低代码开发平台,低代码开发工具,低代码开发工具",
+          "MyBricks,低代码,低代码引擎,低代码平台,低代码开发,低代码开发平台,低代码开发工具",
       },
     ],
   } satisfies Preset.ThemeConfig,
