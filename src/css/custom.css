@@ -118,6 +118,19 @@ section[class*="DocCategoryGeneratedIndexPage"] .card:hover h2 {
   font-style: italic;
 }
 
+.markdown table {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.markdown table th {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.markdown table td {
+  background: #ffffff;
+}
+
 /* sidebar */
 .menu__caret:before {
   background-size: 1.4rem 1.4rem;
