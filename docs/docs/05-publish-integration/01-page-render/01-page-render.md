@@ -1,57 +1,99 @@
 ---
-title: 搭建产物出码渲染流程
+title: 搭建产物解析及自定义渲染
 ---
 
-# 搭建产物出码渲染流程
+# 搭建产物解析及自定义渲染
 
-> Mybricks 通过搭建得到一份对页面内组件以及组件间交互的一份 JSON 描述，我们将解析该 JSON 描述 来渲染最终的内容。以下代码部分仅为示例。
+MyBricks 通过搭建过程生成一份 JSON 描述，这份描述详细地反映了页面内的组件以及它们之间的交互。我们将解析这份 JSON 描述以渲染最终的页面内容。
 
 ![alt text](img/image.png)
 
-## JSON 描述概述
+<figure>总览</figure>
 
-### 多场景
+:::tip
+官方团队分别提供了 [React 渲染器](https://github.com/mybricks/render-web) 和 [Vue 渲染器](https://github.com/mybricks/render-web/tree/bugfix/vue-render)、小程序渲染器等，可以点击查看源代码。
+:::
 
-```
-{
-  "themes": {...},  // 组件风格化信息
-  "global": {...},  // 全局变量、全局Fx  
-  "scenes": [...],  // 搭建内容描述信息
-  "plugins": {...}, // 搭建应用内各插件产物
+## 渲染器的使用
+
+我们可以选择使用现有的渲染器，或者自定义开发一个新的渲染器来进行页面渲染。下面，我们将以官方团队提供的 React 渲染器为例进行说明。
+
+```TSX
+import { render } from "@mybricks/render-web";
+
+export default function Render() {
+  // 渲染
+  // 其中 MyJsonSchema 为搭建产物
+  // env 为自定义注入的运行时特殊能力，如国际化、风格化、单位转换、埋点上报、网络请求等
+  return render(MyJsonSchema, 
+           {
+             env: {
+               i18n(e) {
+                 // 多语言
+               },
+               callConnector(e) {
+                 // 网络请求
+               },
+             },
+           }
+         );
 }
 ```
 
-### 非多场景（搭建单组件等）
+## 搭建产物解析
 
-> 该描述信息即上述多场景内的 scenes 下的每一份内容
+### JSON Schema 结构
+
+JSON Schema 根据搭建的场景不同，可以分为多场景和单场景两种结构。
+
+首先，让我们回顾一下场景的概念。如下图所示，如果应用支持通过「导航 > 新建场景对话框」等方式创建新的场景，那么搭建的产物就属于多场景类型。如果不支持，那么产物就属于单场景类型。
+
+![alt text](img/image-1.png)
+
+<figure>上图即为多场景</figure>
+
+#### 单场景
+
+这通常应用于云组件等应用，其 JSON 描述了一个场景（`scenes`）中的依赖、实例、通信等信息。
 
 ```JSON
 {
-  "deps": [...],    // 组件依赖信息
-  "coms": {...},    // 页面内各组件信息
-  "inputs": [...],  // 全局输入项
-  "outputs": [...], //全局输出项
-  "cons": [...],    // 逻辑面板交互信息
-  "slot": {...},    // UI组件排版、嵌套、父容器样式信息
-  ...
+  "deps": [...],    // 页面依赖组件列表
+  "coms": {...},    // 组件实例的详细信息，包含了实例ID、配置项、输入项、输出项等
+  "slot": {...},    // UI 组件的布局、嵌套关系以及容器的样式信息等
+  "cons": [...],    // 逻辑面板的交互信息
+  "inputs": [...],  // 全局输入项的信息
+  "outputs": [...], // 全局输出项的信息
+  ...               // 其他扩展字段，如 themes（主题包）、plugins（插件）等
 }
 ```
 
+#### 多场景
 
-## 解析流程
+多场景结构适用于更复杂的情况，例如构建一个完整的页面或应用。其 JSON 描述会包含多个场景（`scenes`）的信息。
 
-### 依赖
+```JSON
+{
+  "global": {...},  // 全局变量和函数
+  "scenes": [...],  // 包含多个场景的信息，每一项都是一个单独场景的描述
+  ...               // 其他扩展字段，如 themes（主题包）、plugins（插件）等
+}
+```
+
+### JSON Schema 解析
+
+#### 依赖
 
 - **executor** ，用于处理逻辑编排数据流动
 - **comlib-core** ， **Mybricks** 引擎内置的逻辑组件（变量、Fx 卡片、类型转换等）
 
-### 入口
+#### 入口
 
-#### 提供一个组件
+##### 提供一个组件
 
 > 需要兼容不同的 JSON 描述（多场景、非多场景）
 
-```Vue
+```Typescript
 <script>
 // 非多场景封装组件
 import Main from "./Main.vue";
@@ -72,9 +114,9 @@ export default {
 </script>
 ```
 
-#### 组件入参
+##### 组件入参
 
-```
+```JSON
 {
   "json": {...},     // JSON描述
   "options:": {       // 自定义配置项目，以下仅供参考
@@ -84,15 +126,15 @@ export default {
 }
 ```
 
-### 非多场景（Main.vue）
+#### 非多场景（Main.vue）
 
 > 下述流程均依赖上述组件入参
 
-#### 前置处理逻辑
+##### 前置处理逻辑
 
 1. 合并自定义组件和引擎内置组件（必须，具体取决于 comDefs 数据解构）
 
-```JavaScript
+```Typescript
 import coreLib from "comlib-core"
 
 coreLib.comAray.forEach(({ namespace, version, runtime }) => {
@@ -104,7 +146,7 @@ coreLib.comAray.forEach(({ namespace, version, runtime }) => {
 
 2. 提供 getComDef 函数（必须，具体取决于 comDefs 数据解构）
 
-```Vue
+```Typescript
 <script>
 export default {
   methods: {
@@ -120,7 +162,7 @@ export default {
 
 > 根据具体场景来定义实现
 
-```Vue
+```Typescript
 <script>
 export default {
   methods: {
@@ -141,9 +183,9 @@ export default {
 
 4. 其他
 
-#### 使用 executor 注册组件间逻辑交互
+##### 使用 executor 注册组件间逻辑交互
 
-```Vue
+```Typescript
 <script>
 export default {
   created() {
@@ -168,11 +210,11 @@ export default {
 </script>
 ```
 
-#### 判断是否为逻辑面板描述
+##### 判断是否为逻辑面板描述
 
 > 在多场景中，将全局 Fx 作为一个场景来处理
 
-```Vue
+```Typescript
 <template v-if="json.rtType === 'js'">
   <!-- 没有UI组件，不需要再往下走了 -->
 </template>
@@ -188,11 +230,11 @@ export default {
 </template>
 ```
 
-#### 渲染 UI 组件（slot）
+##### 渲染 UI 组件（slot）
 
 > slot 可以理解为插槽，一个页面就是一个大插槽，插槽内各类组件，组件内也会有插槽，所以这里需要递归遍历组件信息来进行组件的渲染
 
-#### slot 数据格式概述
+##### slot 数据格式概述
 
 ```JSON
 {
@@ -247,9 +289,9 @@ export default {
 }
 ```
 
-#### RenderSlot（遍历 slot 内 comAry）
+##### RenderSlot（遍历 slot 内 comAry）
 
-```Vue
+```Typescript
 <template>
   <div>
     <component
@@ -300,9 +342,9 @@ export default {
 </script>
 ```
 
-#### RenderCom（渲染组件）
+##### RenderCom（渲染组件）
 
-```Vue
+```Typescript
 <template>
   <div>
     <component
@@ -380,11 +422,11 @@ export default {
 </script>
 ```
 
-### 多场景（MultiScene.vue）
+#### 多场景（MultiScene.vue）
 
 > 多场景需要多处理一步全局的 变量 以及 Fx，每个场景的渲染与上述非多场景无异
 
-#### global 数据格式概述
+##### global 数据格式概述
 
 ```JSON
 {
@@ -394,11 +436,11 @@ export default {
 }
 ```
 
-#### 渲染
+##### 渲染
 
 > 分别将 scenes 和 global 下的 fxFrames 遍历使用 Main.vue 去渲染
 
-```Vue
+```Typescript
 <template>
   <div>
     <Main
