@@ -18,25 +18,60 @@ MyBricks 通过搭建过程生成一份 JSON 描述，这份描述详细地反�
 
 我们可以选择使用现有的渲染器，或者自定义开发一个新的渲染器来进行页面渲染。下面，我们将以官方团队提供的 React 渲染器为例进行说明。
 
+
+引入必要的资源，注意这里因为通用组件库依赖 react 和 antd，所以这里需要全局引入一下
+
+```
+<!-- antd 样式部分 -->
+<link rel="stylesheet" type="text/css" href="https://f2.eckwai.com/udata/pkg/eshop/fangzhou/pub/pkg/antd-4.21.6/antd.min.css"/>
+
+<!-- React部分 版本号 -->
+<script src="https://f2.eckwai.com/udata/pkg/eshop/fangzhou/pub/pkg/reat-18.0.0/react.production.min.js"></script>
+<script src="https://f2.eckwai.com/udata/pkg/eshop/fangzhou/pub/pkg/react-dom-18.0.0/react-dom.production.min.js"></script>
+
+<!-- antd js部分 -->
+<script src="https://f2.eckwai.com/udata/pkg/eshop/fangzhou/pub/pkg/antd-4.21.6/antd.min.js"></script>
+<script src="https://f2.eckwai.com/udata/pkg/eshop/fangzhou/pub/pkg/ant-design/icons-4.7.0/dist/index.umd.min.js"></script>
+
+<script src="https://f2.eckwai.com/kos/nlav12333/mybricks/plugin-http-connector/1.1.79/index.js"></script>
+
+<!-- 组件库 -->
+<script src="https://f2.beckwai.com/udata/pkg/eshop/fangzhou/temp/dhunting/460097841299525editJs.js"></script>
+<script src="https://f2.beckwai.com/udata/pkg/eshop/fangzhou/temp/dhunting/460097351385157editJs.js"></script>
+<script src="https://f2.beckwai.com/udata/pkg/eshop/fangzhou/temp/dhunting/460097957634117editJs.js"></script>
+```
+
 ```TSX
+import React, { useState, useCallback, useMemo, useEffect } from "react";
 import { render } from "@mybricks/render-web";
+import { call as callConnectorHttp } from "@mybricks/plugin-connector-http";
+import toJSON from "./toJSON";
 
 export default function Render() {
-  // 渲染
-  // 其中 MyJsonSchema 为搭建产物
-  // env 为自定义注入的运行时特殊能力，如国际化、风格化、单位转换、埋点上报、网络请求等
-  return render(MyJsonSchema, 
-           {
-             env: {
-               i18n(e) {
-                 // 多语言
-               },
-               callConnector(e) {
-                 // 网络请求
-               },
-             },
-           }
-         );
+  return render(toJSON, {
+    env: {
+      i18n(title) {
+        return title;
+      },
+      callConnector(connector, params, connectorConfig = {}) {
+        const plugin =
+          window[connector.connectorName] ||
+          window["@mybricks/plugins/service"];
+
+        const curConnector = (
+          schema.plugins[connector.connectorName] || []
+        ).find((con) => con.id === connector.id);
+
+        return curConnector
+          ? plugin.call(
+              { ...connector, ...curConnector },
+              params,
+              connectorConfig
+            )
+          : Promise.reject("找不到对应连接器 Script 执行脚本.");
+      },
+    },
+  };
 }
 ```
 
