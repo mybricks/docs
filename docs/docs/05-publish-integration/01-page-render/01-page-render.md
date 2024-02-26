@@ -44,7 +44,6 @@ MyBricks 通过搭建过程生成一份 JSON 描述，这份描述详细地反�
 ```TSX
 import React, { useState, useCallback, useMemo, useEffect } from "react";
 import { render } from "@mybricks/render-web";
-import { call as callConnectorHttp } from "@mybricks/plugin-connector-http";
 import toJSON from "./toJSON";
 
 export default function Render() {
