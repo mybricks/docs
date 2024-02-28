@@ -11,8 +11,8 @@ title: AI插件开发
 ![alt text](img/image.png)
 
 ## 如何开发一个AI插件
-### AI插件的原理
-AI插件的目标是根据用户输入的自然语言，生成相应的组件，具体会分下面三步：
+### AI插件的思路
+AI插件的目标：根据用户输入的自然语言，生成相应的组件，具体会分下面三步
 - 用户输入提示词，点击“生成”按钮
 - 将提示词给到大模型并返回固定结构的Json
 - 通过搭建引擎提供的API使用Json自动生成内容（这里使用的api是command）
@@ -61,7 +61,7 @@ export default function AIPlugin() {
 export default function AIPlugin({command}) {
     //这里只展示了插件的UI、以及apiSet如何开发使用，具体的业务逻辑需要根据实际需求进行定制
 
-    //下面是由AI生成好的，准备添加到页面的组件scheme，具体生成过程省略
+    //下面是由AI生成好的，准备添加到页面的组件scheme（可以根据市面上各类大模型的情况，自行选择从自然语言生成到Json的方式）
     const component = {
     "data": [
         {
