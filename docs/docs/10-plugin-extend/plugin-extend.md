@@ -117,7 +117,7 @@ export default function AIPlugin({command}) {
 ```
 
 ### 引入插件
-#### 主应用引入
+#### 设计器引入
 ```javascript
 import AIPlugin from './ai-plugin'
 export default function App() {
