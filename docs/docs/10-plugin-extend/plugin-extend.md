@@ -73,25 +73,8 @@ export default function AIPlugin({command}) {
         {
             "type": "mybricks.normal-pc.custom-button",
             "data": {
-                "asMapArea": false,
                 "text": "打开详情",
-                "dataType": "number",
-                "outVal": 0,
-                "inVal": "",
-                "useIcon": false,
-                "isCustom": false,
-                "icon": "",
-                "size": "middle",
                 "type": "default",
-                "shape": "round",
-                "src": "",
-                "showText": true,
-                "iconLocation": "front",
-                "iconDistance": 8,
-                "contentSize": [
-                    14,
-                    14
-                ],
                 "style": {
                     "backgroundColor": "#1890ff",
                     "borderRadius": "15px"
