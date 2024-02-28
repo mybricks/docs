@@ -61,7 +61,7 @@ export default function AIPlugin() {
 export default function AIPlugin({command}) {
     //这里只展示了插件的UI、以及apiSet如何开发使用，具体的业务逻辑需要根据实际需求进行定制
 
-    //下面是由AI生成好的，准备添加到页的组件scheme，具体生成过程省略
+    //下面是由AI生成好的，准备添加到页面的组件scheme，具体生成过程省略
     const component = {
     "data": [
         {
