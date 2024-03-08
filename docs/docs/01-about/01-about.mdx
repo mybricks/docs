@@ -1,0 +1,145 @@
+---
+title: 关于 MyBricks
+slug: /
+---
+
+import TopicList from "@site/src/components/TopicList";
+
+import qrcode1 from "./img/qrcode1.jpeg";
+import qrcode2 from "./img/qrcode2.png";
+import qrcode3 from "./img/qrcode3.png";
+
+# 关于 MyBricks
+
+MyBricks 为用户提供了两种灵活的使用方式：应用开发平台和独立引擎。
+
+应用开发平台内置了「中后台系统」、「小程序」、「H5页面」、「主题包」、「云组件」等应用，也支持扩展更多自定义应用。
+
+另外也可以基于 MyBricks Inside 计划，快速定制自己的低代码平台。
+
+### 搭建「中后台系统」
+
+<TopicList
+  data={[
+    {
+      title: "基础入门",
+      children: [
+        {
+          title: "快速开始",
+          route: "/docs/getstarted/",
+        },
+        {
+          title: "基础知识",
+          route: "/docs/basic/user-interface/",
+        },
+        {
+          title: "发布与集成",
+          route: "/docs/publish-integration/micro-integration/",
+        },
+      ],
+    },
+    {
+      title: "进阶使用",
+      children: [
+        {
+          title: "使用云组件",
+          route: "/docs/cloud-component-extend/",
+        },
+        {
+          title: "使用主题包",
+          route: "/docs/theme/build/",
+        },
+        {
+          title: "开发自定义组件",
+          route: "/docs/component-extend/",
+        },
+        {
+          title: "开发插件",
+          route: "/docs/plugin-extend/plugin-extend",
+        },
+      ],
+    },
+    {
+      title: "相关课程",
+      children: [
+        {
+          title: " MyBricks 入门课程",
+          route: "/training/head-first/head-first",
+        },
+        {
+          title: "案例：增删改查列表页",
+          route: "/training/pc-case/crud/",
+        },
+      ],
+    },
+  ]}
+/>
+
+### 搭建「小程序」
+
+<TopicList
+  data={[
+    {
+      title: "",
+      children: [
+        {
+          title: "基础操作",
+          route: "/docs/miniprogram/basic/page/",
+        },
+        {
+          title: "搭建案例",
+          route: "/training/xhs-copilot/",
+        },
+      ],
+    },
+  ]}
+/>
+
+### MyBricks Inside
+
+<TopicList
+  data={[
+    {
+      title: "",
+      children: [
+        {
+          title: "Demo 示例",
+          route: "/docs/inside/",
+        },
+      ],
+    },
+  ]}
+/>
+
+### 获取更多信息
+
+<table>
+  <tr>
+    <th>微信公众号</th>
+    <th>合作咨询</th>
+    <th>开发交流</th>
+  </tr>
+  <tr>
+    <td>
+      <img
+        style={{ display: "block", width: "200px", margin: "0 auto 20px" }}
+        src={qrcode1.src}
+      />
+      <p style={{ textAlign: "center" }}>MyBricks 低代码</p>
+    </td>
+    <td>
+      <img
+        style={{ display: "block", width: "200px", margin: "0 auto 20px" }}
+        src={qrcode2.src}
+      />
+      <p style={{ textAlign: "center" }}>请备注「合作咨询」</p>
+    </td>
+    <td>
+      <img
+        style={{ display: "block", width: "200px", margin: "0 auto 20px" }}
+        src={qrcode3.src}
+      />
+      <p style={{ textAlign: "center" }}>请备注「低代码交流」</p>
+    </td>
+  </tr>
+</table>

@@ -90,6 +90,41 @@ section[class*="DocCategoryGeneratedIndexPage"] .card:hover h2 {
   color: var(--ifm-color-primary);
 }
 
+.markdown h1,
+.markdown h1:first-child {
+  font-size: 2.875rem;
+  line-height: 3.375rem;
+}
+
+.markdown h2,
+.markdown h2:first-child {
+  font-size: 2.375rem;
+  line-height: 2.875rem;
+}
+
+.markdown h3,
+.markdown h3:first-child {
+  font-size: 1.875rem;
+  line-height: 2.375rem;
+}
+
+.markdown h4,
+.markdown h4:first-child {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.markdown h5,
+.markdown h5:first-child {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.markdown p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
 .markdown blockquote {
   padding-bottom: 0.3em;
   padding-top: 0.3em;
