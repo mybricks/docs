@@ -7,6 +7,10 @@ title: 快速开始
 ## 新建你的第一个页面
 在工作台，点击右上角「新建」，选择「PC 页面」应用，选择模板或者直接新建空页面，输入页面名字，然后点击「确认」进行创建：
 
+:::tip
+这里需要选择「PC页面」应用，不要错选到「PC网站」应用
+:::
+
 ![alt text](img/image-22.png)
 ![alt text](img/image-23.png)
 ![alt text](img/image-24.png)
