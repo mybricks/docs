@@ -139,6 +139,14 @@ section[class*="DocCategoryGeneratedIndexPage"] .card:hover h2 {
   background-color: var(--ifm-color-primary-lightest);
   color: var(--ifm-font-color-base);
 }
+/* 
+.markdown p img {
+  display: inline-block;
+  width: auto;
+  height: 1.5rem;
+  margin-left: 4px;
+  margin-right: 4px;
+} */
 
 .markdown img {
   display: block;
