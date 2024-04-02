@@ -2,4 +2,4 @@
 title: 逻辑搭建
 ---
 
-详见 [交互视图](/docs/getstarted/toplView/)
+详见 [交互视图](/docs/basic/toplView/)
