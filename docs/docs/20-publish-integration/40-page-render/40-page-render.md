@@ -70,7 +70,7 @@ export default function Render() {
           : Promise.reject("找不到对应连接器 Script 执行脚本.");
       },
     },
-  };
+  });
 }
 ```
 
