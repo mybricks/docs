@@ -72,3 +72,7 @@ Demo地址：[https://github.com/mybricks/vue-main](https://github.com/mybricks/
 ## 2.2 React  主应用
 
 Demo地址：[https://github.com/mybricks/react-main](https://github.com/mybricks/react-main)
+
+## 2.3 注意事项
+
+渲染子应用时不要开启样式隔离，否则会导致部分样式丢失。
