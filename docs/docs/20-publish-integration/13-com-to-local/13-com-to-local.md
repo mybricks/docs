@@ -2,11 +2,9 @@
 title: PC云组件出码到本地工程
 ---
 
-**云组件本地文件引入：快速上手**
-
 # 一、快速上手
 
-1.  ## 创建 PC 云组件
+## 创建 PC 云组件
 
 - 访问 MyBricks 平台：[https://my.mybricks.world/](https://my.mybricks.world/)
 - 到一个合适的位置，推荐到一个协作组中，方便协作。
@@ -18,7 +16,7 @@ title: PC云组件出码到本地工程
 
 ![alt text](img/image-1.png)
 
-2.  ## 搭建一个卡片
+## 搭建一个卡片
 
 完成云组件创建后，您可以开始搭建所需的云组件。
 
@@ -226,7 +224,7 @@ export default function TestCodeOut() {
 
 Demo 地址：[https://my.mybricks.world/mybricks-app-pc-cdm/index.html?id=562447376502853](https://my.mybricks.world/mybricks-app-pc-cdm/index.html?id=562447376502853)
 
-3.  ## 出码到本地
+## 出码到本地
 
 - 点击右上角的 **导出** 按钮。
 
@@ -256,7 +254,7 @@ Demo 地址：[https://my.mybricks.world/mybricks-app-pc-cdm/index.html?id=56244
 
 直接在自己的项目代码中引入导出的组件，根据 TS 提示消费即可。
 
-4.  ## 安装依赖
+## 安装依赖
 
 运行之前需要安装必要的渲染器包以及相关依赖包
 
@@ -274,7 +272,7 @@ npm install antd@4.21.6 @ant-design/icons@4.7.0 moment @mybricks/comlib-basic @m
 
 Tips：内置的组件库 antd 需使用 v4 版本
 
-5.  ## 最终效果
+## 最终效果
 
 ![alt text](img/image-18.png)
 
