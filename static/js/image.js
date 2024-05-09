@@ -1,42 +1,39 @@
 (function () {
-  // 检查 .markdown 是否加载完成
-  function observeMarkdown() {
-    var targetNode = document.querySelector(".markdown");
-    if (!targetNode) {
-      setTimeout(observeMarkdown, 1000);
-      return;
-    }
+  /**
+   * 为 body 添加 mousemove 事件
+   *
+   * 如果鼠标移动到 .markdown 标签内的 img 元素上
+   * 如果该 img 元素的宽度小于自然宽度，鼠标变为放大镜
+   *
+   *
+   */
+  document.body.addEventListener("mousemove", function (e) {
+    var target = e.target;
+    if (target.tagName === "IMG" && target.closest(".markdown")) {
+      var imgWidth = target.width;
+      var naturalWidth = target.naturalWidth;
 
-    observeImages();
-  }
-
-  //
-  function observeImages() {
-    var images = document.querySelectorAll(".markdown img");
-
-    images.forEach(function (img) {
-      if (img.naturalWidth) {
-        handleImage(img);
-      } else {
-        img.addEventListener("load", function () {
-          handleImage(img);
-        });
+      if (imgWidth < naturalWidth) {
+        target.style.cursor = "zoom-in";
       }
-    });
-  }
+    }
+  });
 
-  //
-  function handleImage(img) {
-    var imgWidth = img.width;
-    var naturalWidth = img.naturalWidth;
+  /**
+   * 为 body 添加 click 事件
+   * 如果点击的是 .markdown 标签内的 img 元素
+   * 如果该 img 元素的宽度小于自然宽度，显示大图
+   * 点击大图，关闭大图
+   * 禁用滚动
+   */
 
-    if (imgWidth < naturalWidth) {
-      img.addEventListener("mouseenter", function () {
-        img.style.cursor = "zoom-in";
-      });
+  document.body.addEventListener("click", function (e) {
+    var target = e.target;
+    if (target.tagName === "IMG" && target.closest(".markdown")) {
+      var imgWidth = target.width;
+      var naturalWidth = target.naturalWidth;
 
-      img.addEventListener("click", function () {
-        // 点击图片，在页面上渲染一个大图
+      if (imgWidth < naturalWidth) {
         var imgContainer = document.createElement("div");
         imgContainer.style.position = "fixed";
         imgContainer.style.top = "0";
@@ -50,7 +47,7 @@
         imgContainer.style.alignItems = "center";
 
         var imgElement = document.createElement("img");
-        imgElement.src = img.src;
+        imgElement.src = target.src;
         imgElement.style.maxWidth = "100%";
         imgElement.style.maxHeight = "100%";
         imgElement.style.cursor = "zoom-out";
@@ -64,9 +61,7 @@
 
         // 禁用滚动
         document.body.style.overflow = "hidden";
-      });
+      }
     }
-  }
-
-  observeMarkdown();
+  });
 })();
