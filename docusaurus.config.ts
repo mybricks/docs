@@ -75,10 +75,10 @@ const config: Config = {
           label: "文档",
         },
         {
-          type: 'docSidebar',
-          sidebarId: 'componentsSidebar',
-          position: 'left',
-          label: '组件库',
+          type: "docSidebar",
+          sidebarId: "componentsSidebar",
+          position: "left",
+          label: "组件库",
         },
         {
           type: "docSidebar",
@@ -189,6 +189,10 @@ const config: Config = {
     ],
   ],
   scripts: [
+    {
+      src: "/js/image.js",
+      defer: true,
+    },
     {
       src: "https://hm.baidu.com/hm.js?574a532b5379b5599af68a6524a989b6",
       async: true,
