@@ -45,6 +45,7 @@
   margin: auto;
   width: 1000px;
   position: relative !important;
+  max-width: 100%;
 }
 .nowTheme {
   background-color: whitesmoke !important;

@@ -90,28 +90,51 @@ section[class*="DocCategoryGeneratedIndexPage"] .card:hover h2 {
   color: var(--ifm-color-primary);
 }
 
+.markdown {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
 .markdown h1,
-.markdown h1:first-child {
-  font-size: 2.875rem;
-  line-height: 3.375rem;
-}
-
 .markdown h2,
-.markdown h2:first-child {
-  font-size: 2.375rem;
-  line-height: 2.875rem;
-}
-
 .markdown h3,
-.markdown h3:first-child {
-  font-size: 1.875rem;
-  line-height: 2.375rem;
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+  position: relative;
+  font-weight: 600;
+  line-height: 1.5;
+  outline: none;
 }
 
-.markdown h4,
-.markdown h4:first-child {
-  font-size: 1.5rem;
-  line-height: 2rem;
+.markdown h1 {
+  margin: 2rem 0 2rem;
+  font-size: 38px;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+}
+
+.markdown h2 {
+  margin: 3rem 0 1.8rem;
+  border-top: 1px solid rgba(60, 60, 60, 0.12);
+  padding-top: 1.8rem;
+  font-size: 24px;
+  letter-spacing: -0.02em;
+}
+
+.markdown h3 {
+  font-size: 19px;
+  letter-spacing: -0.01em;
+  margin: 3rem 0 1.25rem;
+}
+
+.vt-doc h2 + h3 {
+  margin-top: 0;
+}
+
+.vt-doc h4 {
+  font-size: 17px;
+  margin: 1.8rem 0 1rem;
 }
 
 .markdown h5,
@@ -121,8 +144,7 @@ section[class*="DocCategoryGeneratedIndexPage"] .card:hover h2 {
 }
 
 .markdown p {
-  font-size: 1rem;
-  line-height: 1.5rem;
+  margin-bottom: 1.2em;
 }
 
 .markdown blockquote {
@@ -139,14 +161,6 @@ section[class*="DocCategoryGeneratedIndexPage"] .card:hover h2 {
   background-color: var(--ifm-color-primary-lightest);
   color: var(--ifm-font-color-base);
 }
-/* 
-.markdown p img {
-  display: inline-block;
-  width: auto;
-  height: 1.5rem;
-  margin-left: 4px;
-  margin-right: 4px;
-} */
 
 .markdown img {
   display: block;
