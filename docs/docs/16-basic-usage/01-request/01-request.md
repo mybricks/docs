@@ -4,6 +4,30 @@
 
 # 如何使用连接器发起网络请求
 
+## 【入门】一个简单的例子
+本次请求的接口：https://my.mybricks.world/api/system/domain/run/569807759597637/u_0IWER
+
+demo 链接：[点击查看搭建示例](https://my.mybricks.world/mybricks-app-mpsite/index.html?id=569809791750213)
+
+### ①在服务连接面板，新建一个普通接口
+![alt text](img/image-30.png)
+
+### ②填入「接口」地址，然后点击保存
+![alt text](img/image-31.png)
+
+### ③回到画布，给一个按钮增加点击事件，然后在点击事件中选择js计算中的「服务接口」组件
+![alt text](img/image-32.png)
+
+### ④在服务接口右侧配置面板，选择上刚刚创建的接口
+![alt text](img/image-33.png)
+
+### ⑤从服务接口右侧结果输出，连出一条线，把返回的结果赋值到「文本组件」上
+![alt text](img/image-34.png)
+
+### ⑥点击预览，点击按钮，即可看到请求的结果
+![alt text](img/image-35.png)
+
+
 ## 创建 HTTP 接口
 
 **从左侧边栏打开「连接器」插件** > **点击「+」，添加接口** > **填写接口信息**
