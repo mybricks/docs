@@ -5,7 +5,7 @@ title: 往画布添加组件
 
 
 ## 打开组件库面板，添加一个组件
-![alt text](img/image.png)
+![alt text](img/image-2.png)
 
 ## 最终效果
 ![alt text](img/image-1.png)
