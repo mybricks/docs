@@ -1,0 +1,126 @@
+---
+title: 平台Git源码部署
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
+## 0.前置条件
+请确保环境内
+- 已安装有 **Node 14+（推荐v14.21.0）**、**npm**或者**yarn**等包管理工具，推荐 npm 7.x 以上
+- 配置并启动了数据库环境，**MySql 5.7 以上**，如果安装的是 MySQL8.x，注意密码加密方式设置为：Legacy Password Encryption，切记不要设置为 Strong Password Encryption
+
+## 1.下载源码
+```
+git clone https://github.com/mybricks/apaas.git my-apaas
+```
+
+## 2.切换目录
+```
+cd my-apaas
+```
+
+## 3.安装依赖
+<Tabs
+  defaultValue="npm"
+  values={[
+    {label: 'npm', value: 'npm'},
+    {label: 'yarn', value: 'yarn'}
+  ]}>
+  <TabItem value="npm">
+  ```
+  npm install
+  ```
+  :::warning
+  如果npm版本太低可能会无法触发一键安装钩子，建议升级到npm 7.x以上
+
+  如若无法升级npm版本，可以手动调用 npm run postinstall 来安装依赖
+  :::
+  </TabItem>
+  <TabItem value="yarn">
+  ```
+  yarn
+  ```
+  </TabItem>
+</Tabs>
+
+## 4.配置环境变量
+在 **项目根目录下** 参考 `config.example.js` 创建 `config.js` 文件，并配置以下环境变量
+``` javascript
+module.exports = {
+  /**
+   * @description 数据库配置，目前仅支持 mysql 数据库
+   */
+  database: {
+    dbType: 'MYSQL',
+    host: '',
+    user: '',
+    password: '',
+    port: 3000,
+    database: ''
+  },
+  /** 平台配置 */
+  platformConfig: {
+    /** 
+     * @description [可选项] 网站前端各个位置的标题文案
+     */
+    title: 'MyBricks开放应用平台',
+    /**
+     * @description [可选项] 网站前端页面的 favicon，支持http链接以及base64
+     */
+    favicon: '',
+    /**
+     * @description [可选项] 网站页面内的平台图标，支持http链接以及base64
+     */
+    icon: '',
+  },
+  /**
+   * @description [可选项] 管理员账号与密码，初始化数据库时会使用此账号密码
+   */
+  adminUser: {
+    email: '',
+    password: '',
+  }
+}
+```
+:::info
+config文件支持区分开发 / 生产环境，开发环境优先取`config.development.js`，生产环境则优先取`config.production.js`
+:::
+
+## 5.开发 / 调试平台
+在 **开发环境** 下开发 / 调试平台
+
+启动前端
+```
+npm run dev:fe
+```
+启动服务端
+```
+npm run dev:server
+```
+根据提示使用浏览器打开 [http://localhost:3101](http://localhost:3101) 开始调试
+
+
+## 6.部署平台
+在 **生产环境** 下部署平台
+
+[可选操作] 环境检测
+```bash
+# 脚本将会检测生产环境的各类信息是否符合规范，在 配置了数据库且数据库不存在 的情况下，初始化数据库
+
+npm run start:prepare
+```
+
+编译 / 构建产物
+```
+npm run build
+```
+启动
+```
+npm run start
+```
+
+:::tip
+启动后服务将使用 npx pm2 来管理服务，可以使用 npx pm2 的各类命令
+:::
