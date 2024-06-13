@@ -50,7 +50,7 @@ cd my-apaas
 ``` javascript
 module.exports = {
   /**
-   * @description 数据库配置，目前仅支持 mysql 数据库
+   * @description 必填 数据库配置，目前仅支持 mysql 数据库
    */
   database: {
     dbType: 'MYSQL',
@@ -60,8 +60,26 @@ module.exports = {
     port: 3000,
     database: ''
   },
-  /** 平台配置 */
+  /**
+   * @description 必填 平台配置 
+  */
   platformConfig: {
+    /** 
+     * @description 必填 pm2 进程名字
+     */
+    appName: 'mybricks-apaas',
+    /**
+     * @description 必填 服务端口号
+     */
+    port: 6666,
+    /**
+     * @description [可选项] 如果是容器化技术必填，各类持久化文件的读写位置，不填写时默认取当前路径的根目录，使用绝对路径
+     */
+    exteralFilesStoragePath: '',
+    /**
+     * @description [可选项] 建议设置，用于登录的时候生成jwt token的 加盐值或者私钥，可以填写一个不容易生成的随机值
+     */
+    jwtSecretOrPrivateKey: '',
     /** 
      * @description [可选项] 网站前端各个位置的标题文案
      */
@@ -73,7 +91,11 @@ module.exports = {
     /**
      * @description [可选项] 网站页面内的平台图标，支持http链接以及base64
      */
-    icon: '',
+    logo: '',
+    /**
+     * @description [可选项] 指定平台运行时动态安装应用时如何安装应用的node_modules依赖，默认值为 npm i --registry=https://registry.npmmirror.com --production
+     */
+    installCommand: 'npm i --registry=https://registry.npmmirror.com --production'
   },
   /**
    * @description [可选项] 管理员账号与密码，初始化数据库时会使用此账号密码
