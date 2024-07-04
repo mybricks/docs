@@ -258,6 +258,8 @@ Demo 地址：[https://my.mybricks.world/mybricks-app-pc-cdm/index.html?id=56244
 
 运行之前需要安装必要的渲染器包以及相关依赖包
 
+### 本地出码渲染
+
 推荐使用 npm ，只需要安装一个包，执行以下命令
 
 ```Bash
@@ -268,6 +270,37 @@ npm install @mybricks/renderer-pc -S
 
 ```Bash
 npm install antd@4.21.6 @ant-design/icons@4.7.0 moment @mybricks/comlib-basic @mybricks/comlib-pc-normal -S
+```
+
+### 根据 JS 文件渲染
+
+```Bash
+npm install @mybricks/renderer-pc-cloud -S
+```
+
+相关依赖需要进行 externals, webpack 配置示例
+
+```javaScript
+module.exports = {
+  externals: {
+    react: {
+        commonjs: 'react',
+        commonjs2: 'react',
+        amd: 'react',
+        root: 'React',
+      },
+      'react-dom': {
+        commonjs: 'react-dom',
+        commonjs2: 'react-dom',
+        amd: 'react-dom',
+        root: 'ReactDOM',
+      },
+      moment: 'moment',
+      antd: 'antd',
+      '@ant-design/icons': 'icons'
+  }
+}
+
 ```
 
 Tips：内置的组件库 antd 需使用 v4 版本
