@@ -295,9 +295,12 @@ module.exports = {
         amd: 'react-dom',
         root: 'ReactDOM',
       },
-      moment: 'moment',
       antd: 'antd',
       '@ant-design/icons': 'icons'
+      // 用到 日期 相关组件
+      moment: 'moment',
+      // 按需 如果用到图表
+      '@ant-design/chart': 'Charts'
   }
 }
 
