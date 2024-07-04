@@ -306,6 +306,19 @@ module.exports = {
 
 ```
 
+```jsx
+import React, { useRef, useState } from 'react'
+import RendererCloud from '@mybricks/renderer-pc-cloud'
+
+const App = () => {
+  const comRef = useRef(null)
+
+  return <RendererCloud ref={comRef} comUrl="" />
+}
+
+export default App
+```
+
 Tips：内置的组件库 antd 需使用 v4 版本
 
 ## 最终效果
