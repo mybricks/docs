@@ -2,6 +2,15 @@
 title: 常见问题
 ---
 
+## 使用问题
+
+### 在搭建中，使用保存功能出错
+1. 错误信息提示 Got a packet bigger than'max allowed_packet' bytes
+2. 错误信息提示 write EPIPE
+
+可以查看是否是 MySql的配置问题，主要看 max_allowed_packet 配置
+> 可参考此链接 https://stackoverflow.com/questions/8062496/how-to-change-max-allowed-packet-size
+
 ## 部署问题
 
 ### 安装应用后，能打开页面，但是显示一直加载中
