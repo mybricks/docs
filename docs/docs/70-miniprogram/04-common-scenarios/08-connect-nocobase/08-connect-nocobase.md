@@ -52,9 +52,13 @@ NocoBase 可以实现管理后台无代码搭建，并对外提供 API。我们�
 接下来我们要进入 MyBricks 进行小程序部分的搭建，点击查看 **[搭建 Demo](https://my.mybricks.world/mybricks-app-mpsite/index.html?id=592244920504389)**。
 :::
 
-## 3. 使用 MyBricks 登录 NocoBase
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="//player.bilibili.com/player.html?isOutside=true&aid=112926652367489&bvid=BV1AEYbeFEyj&cid=500001642764072&p=1&autoplay=0" frameborder="no" scrolling="no"></iframe>
+</div>
 
-**「视频上传中...」**
+[原视频地址](https://www.bilibili.com/video/BV1AEYbeFEyj/)
+
+## 3. 使用 MyBricks 登录 NocoBase
 
 在请求文章的增删改查接口之前，有一个前置条件就是用户登录。我们可以先阅读 [如何实现登录/登出功能](/docs/miniprogram/common-scenarios/login-logout/)。
 
@@ -95,7 +99,7 @@ headers = {
 
 登录成功后，我们就可以请求增删改查接口了。
 
-**「视频上传中...」**
+**详见视频**
 
 ## 5. 特别注意
 
@@ -104,3 +108,15 @@ headers = {
 此时如果请求你的 NocoBase API 出现跨域报错，你可以通过下载并开启 [chrome 插件 > Allow CORS](https://chromewebstore.google.com/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=zh-CN&utm_source=ext_sidebar) 来解决跨域问题。
 
 ![alt text](img/image-3.png)
+
+## 6. 附
+
+如果你是期望使用「PC搭建」来扩展 NocoBase：
+
+[原型即产品，使用 MyBricks 绘制专业原型图](/blog/draw-professional-prototypes-with-mybricks)
+
+[案例：增删改查列表页](/training/pc-case/crud/)
+
+[nocobase连接示例](https://my.mybricks.world/mybricks-app-pcspa/index.html?id=592126567915589)
+
+[PC 连接NocoBase并实现增删改查](https://my.mybricks.world/mybricks-app-pcspa/index.html?id=592524615163973)
