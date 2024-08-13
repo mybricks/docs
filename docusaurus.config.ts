@@ -87,6 +87,11 @@ const config: Config = {
           label: "课程",
         },
         { to: "/blog", label: "博客", position: "left" },
+        {
+          href: 'https://space.bilibili.com/314021104?spm_id_from=333.337.search-card.all.click',
+          label: '相关视频',
+          position: 'left',
+        },
         // {
         //   href: 'https://github.com/mybricks',
         //   label: 'GitHub',
