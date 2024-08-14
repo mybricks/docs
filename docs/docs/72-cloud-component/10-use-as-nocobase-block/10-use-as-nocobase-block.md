@@ -4,7 +4,7 @@ title: 在 NocoBase 中使用 MyBricks 云组件
 
 ### 第一步：安装
 
-下载 NocoBase 插件 **[「@MyBricks/云组件」](https://releases.mybricks.world/nocobase-plugin-cloud-com/cloud-com-1.0.1.tgz)**，安装并开启插件。
+下载 NocoBase 插件 **[「@MyBricks/云组件 v1.0.4」](https://releases.mybricks.world/nocobase-plugin-cloud-com/cloud-com-1.0.4.tgz)**，安装并开启插件。
 
 ### 第二步：添加区块
 
