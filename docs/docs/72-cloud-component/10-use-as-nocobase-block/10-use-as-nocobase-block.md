@@ -4,7 +4,7 @@ title: 在 NocoBase 中使用 MyBricks 云组件
 
 ### 第一步：安装
 
-下载 NocoBase 插件 **[「@MyBricks/云组件 v1.0.5」](https://releases.mybricks.world/nocobase-plugin-cloud-com/cloud-com-1.0.5.tgz)**，安装并开启插件。
+下载 NocoBase 插件 **[「@MyBricks/云组件 v1.0.6」](https://releases.mybricks.world/nocobase-plugin-cloud-com/cloud-com-1.0.6.tgz)**，安装并开启插件。
 
 ### 第二步：添加区块
 
@@ -40,4 +40,3 @@ title: 在 NocoBase 中使用 MyBricks 云组件
 插件地址：https://f2.eckwai.com/kos/nlav12333/nocobase-plugin-service/plugin.js
 runtime地址：https://f2.eckwai.com/kos/nlav12333/nocobase-plugin-service/index.js
 ```
-
