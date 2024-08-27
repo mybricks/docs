@@ -10,7 +10,7 @@ NocoBase 可以实现管理后台无代码搭建，并对外提供 API。我们�
 
 首先你需要部署一个 [NocoBase](https://www.nocobase.com/)，需 v0.14 及以上版本。
 
-下载并安装 [微信 API 插件 v1.0.5](https://mybricks-releases.oss-cn-hangzhou.aliyuncs.com/nocobase-plugin-weixin-api/weixin-api-1.0.5.tgz)，然后在「插件管理器 > 开启微信 API 插件」。
+下载并安装 [微信 API 插件 v1.0.6](https://mybricks-releases.oss-cn-hangzhou.aliyuncs.com/nocobase-plugin-weixin-api/weixin-api-1.0.6.tgz) ([微信 API 插件 v1.0.6 next 分支](https://mybricks-releases.oss-cn-hangzhou.aliyuncs.com/nocobase-plugin-weixin-api/weixin-api-1.0.6-next.tgz))，然后在「插件管理器 > 开启微信 API 插件」。
 
 ![](img/upload-plugin.gif)
 
