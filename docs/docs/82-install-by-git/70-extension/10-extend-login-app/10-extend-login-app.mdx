@@ -1,0 +1,113 @@
+---
+title: 登录打通
+---
+
+本篇主要介绍如何通过 **自定义应用** 的方式对「平台」进行拓展，使用其它系统的登录态来登录 MyBricks 平台
+
+:::tip
+登录打通的逻辑主要在服务端的「[中间件](https://expressjs.com/zh-cn/guide/writing-middleware.html)」逻辑，本示例只包含中间件代码
+:::
+
+大体需求如下：
+1. 获取当前浏览器 cookie 信息
+2. 通过 cookie 换取用户信息
+3. 换取后 查询 MyBricks 平台 中是否有当前用户，没有当前用户则使用当前信息创建新用户，并将用户信息写入平台上下文
+
+## 创建应用
+给应用起一个唯一标识，比如 mybricks-app-my-login，主要不要包含特殊字符
+
+将 [示例仓库](https://github.com/mybricks/mybricks-app-login-demo) 代码拷贝至 apaas仓库 根目录的 apps 目录下，文件夹命名为 唯一标识，同时修改 package.json 下的 name 字段为 唯一标识
+
+拷贝完成之后，大体结构如下
+```markdown
+- / <!-- 平台根目录 -->
+  - apps/ <!-- 平台应用文件夹 -->
+    - mybricks-open-login/ <!-- 平台内置的登录应用代码 -->
+    - mybricks-app-my-login/ <!-- 我们刚刚拷贝的代码文件夹 -->
+      - nodejs/
+        - middleware/
+          - index.middleware.ts <!-- 自定义中间件的主要逻辑 -->
+      - package.json
+  - platform/ <!-- 平台源码 -->
+  - sciprts/ <!-- 平台源码 -->
+  - package.json <!-- 平台源码 -->
+```
+
+## 开发应用
+根据上面所提到的需求，我们只需要关心中间件代码即可，这里我们只用关心两种结果
+1. 没有登录，直接 next 到下一个中间件即可
+2. 获取登录态成功，则使用 上下文提供的 setUser 方法注入
+
+伪代码如下所示，**完整代码**可从 [示例仓库](https://github.com/mybricks/mybricks-app-login-demo) 获取
+```typescript
+/** 需要鉴权的 获取用户信息 的接口列表 */
+const NEED_AUTH_PATHES = ['/paas/api/user/signed', '/paas/api/user/queryCurrentSession']
+
+enum UserRole {
+  NORMAL = 2, // 普通用户
+  ADMIN = 10 // 超管
+}
+
+export default function registerUser({ UserModel, setUser, Logger }: MiddlewareContext) {
+  return async function (request, response, next) {
+    if(NEED_AUTH_PATHES.includes(request.path)) {
+      try {
+        // 获取到的目标用户信息
+        let userInfo: UserInfo | null = null;
+
+        // 方式一，从 http cookie 中获取用户信息
+        const cookieInfo = request?.cookies?.['目标cookie的key'];
+        userInfo = JSON.parse(cookieInfo); // 假设用户信息以json方式存储
+
+        // 方式二，从 http header 中获取用户信息
+        const headerValue = request?.headers?.['目标header的key'];
+        function jwtVerify (v) {return v}
+        userInfo = jwtVerify(headerValue)?.payload; // 假设用户信息以jsonwebtoken的形式存储
+
+        // 如果没获取到用户信息，可以直接返回，此时会提示用户进行登录
+        if (!userInfo) {
+          return next();
+        }
+
+        const name = userInfo.name;
+        const avatar = userInfo.avatar ?? '/default_avatar.png';
+        const email = userInfo.email;
+  
+        // 查询用户是否存在
+        const user = await UserModel.query({
+          email,
+        });
+  
+        // 不存在，则注册新用户
+        if (!user) {
+          await UserModel.create({
+            name,
+            email,
+            avatar,
+            role: userInfo?.isAdmin ? UserRole.ADMIN : UserRole.NORMAL
+          });
+        }
+
+        // 将用户信息注入 Mybricks 平台
+        setUser(request, { email })
+      } catch (error) {
+        Logger.error(error?.stack ?? '未知错误')
+      }
+    }
+    next();
+  };
+}
+```
+
+## 调试应用
+在 apaas仓库 根目录执行以下命令，调试服务将会启动在配置文件的端口下，访问
+
+```bash
+# 安装命令 npm i / yarn
+npm i 
+# 启动调试服务
+npm run dev:server
+```
+
+## 部署自定义应用
+直接将当前 apps 目录下 自定义应用的文件夹 拷贝至目标平台代码即可，重新启动即可
