@@ -4,7 +4,7 @@ title: 自定义组件
 
 ## 环境准备
 
-点击下载 [「组件库模板」](https://f2.beckwai.com/udata/pkg/eshop/fangzhou/mybricks.normal-miniapp.taro/comlib-taro-demo.zip) 
+点击下载 [「组件库模板」](https://f2.beckwai.com/udata/pkg/eshop/fangzhou/demo/comlib-taro-demo.zip) 
 
 首先进行初始化配置：
 
